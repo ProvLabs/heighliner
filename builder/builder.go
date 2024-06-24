@@ -256,6 +256,8 @@ func getWasmvmVersion(modFile *modfile.File) string {
 		}
 	}
 
+	wasmvmRepo = strings.TrimRight(wasmvmRepo, "/v2")
+
 	fmt.Printf("WasmVM from go.mod: repo: %s, version: %s\n", wasmvmRepo, wasmvmVersion)
 
 	if wasmvmVersion == "" {
